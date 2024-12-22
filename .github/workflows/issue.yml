@@ -1,0 +1,8 @@
+name: Output Oppened Issue
+on: [issues_opened]
+jobs:
+  output:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output Issue Context
+        run: echo "issues data: ${{ github.event.issue }}"
